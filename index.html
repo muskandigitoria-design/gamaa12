@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Gama 567 – Official Platform</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,120 +16,133 @@
 }
 
 body{
-  background:linear-gradient(135deg,#ffffff,#f4f7fb);
+  background:linear-gradient(180deg,#ffffff,#f3f6fb);
   color:#222;
-  min-height:100vh;
 }
 
 /* HEADER */
-.header{
-  padding:18px;
+header{
+  padding:22px;
   text-align:center;
-  font-size:28px;
+  font-size:30px;
   font-weight:700;
 }
 
-.header span{
-  color:#ff3b3b;
+header span{
+  color:#ff3d3d;
 }
 
 /* HERO */
 .hero{
-  padding:20px;
-  display:flex;
-  flex-direction:column;
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px 60px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:40px;
   align-items:center;
-  text-align:center;
 }
 
 .hero-img{
-  width:260px;
-  max-width:90%;
-  margin-bottom:20px;
+  display:flex;
+  justify-content:center;
 }
 
 .hero-img img{
-  width:100%;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,.2);
+  width:280px;
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
 }
 
-.hero h1{
-  font-size:26px;
+.hero-text{
+  text-align:center;
+}
+
+.hero-text h1{
+  font-size:32px;
   font-weight:700;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
-.hero p{
-  font-size:15px;
-  color:#555;
-  margin-bottom:20px;
-}
-
-/* BUTTON */
-.cta-btn{
-  display:inline-block;
-  padding:14px 36px;
-  border-radius:50px;
-  background:linear-gradient(45deg,#ff3b3b,#ff7a18);
-  color:#fff;
-  font-weight:600;
+.hero-text p{
   font-size:16px;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(255,59,59,.4);
-  animation:pulse 2s infinite;
+  color:#555;
+  margin-bottom:26px;
+  line-height:1.6;
 }
 
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.05)}
-  100%{transform:scale(1)}
+/* CTA BUTTON */
+.cta{
+  display:inline-block;
+  padding:15px 42px;
+  font-size:17px;
+  font-weight:600;
+  color:#fff;
+  border-radius:50px;
+  background:linear-gradient(45deg,#ff3d3d,#ff7a18);
+  box-shadow:0 12px 30px rgba(255,61,61,.45);
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(255,61,61,.6);
 }
 
 /* FEATURES */
 .features{
-  margin-top:40px;
-  padding:20px;
+  max-width:1000px;
+  margin:auto;
+  padding:30px 20px 70px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
 }
 
-.feature-box{
+.feature{
   background:#fff;
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  text-align:left;
+  padding:22px;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
 }
 
-.feature-box h3{
-  font-size:16px;
-  margin-bottom:5px;
+.icon{
+  font-size:22px;
 }
 
-.feature-box p{
+.feature h3{
+  font-size:17px;
+  margin-bottom:6px;
+}
+
+.feature p{
   font-size:14px;
   color:#666;
+  line-height:1.5;
 }
 
 /* FOOTER */
-.footer{
+footer{
   text-align:center;
+  padding:25px;
   font-size:13px;
   color:#777;
-  padding:20px;
 }
 
 /* DESKTOP */
 @media(min-width:768px){
   .hero{
-    flex-direction:row;
-    justify-content:center;
-    text-align:left;
-    gap:40px;
+    grid-template-columns:1fr 1fr;
   }
-
   .hero-text{
-    max-width:400px;
+    text-align:left;
+  }
+  .hero-text h1{
+    font-size:38px;
   }
 }
 </style>
@@ -137,57 +150,59 @@ body{
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<header>
   Gama <span>567</span>
-</div>
+</header>
 
-<!-- HERO SECTION -->
-<div class="hero">
+<section class="hero">
 
   <div class="hero-img">
-    <!-- You can replace this image anytime -->
-    <img src="https://gamam567.site/assets/img/banner-shot.png" alt="Gama 567">
+    <img src="https://onebyone.site/wp-content/uploads/2026/02/gaanshyaam.jpg" alt="Gama 567">
   </div>
 
   <div class="hero-text">
     <h1>India’s Trusted Gaming Platform</h1>
     <p>
-      Simple interface, fast experience, and smooth performance.
-      Join thousands of users on Gama 567.
+      Experience a smooth, fast and reliable platform designed
+      for users who value performance and simplicity.
     </p>
 
-    <a href="https://gamam567.site/app/Gama567_1.apk" class="cta-btn">
-      Get Started Now
-    </a>
+    <a href="#" class="cta">Get Started Now</a>
   </div>
 
-</div>
+</section>
 
-<!-- FEATURES -->
-<div class="features">
+<section class="features">
 
-  <div class="feature-box">
-    <h3>⚡ Fast & Smooth</h3>
-    <p>Optimized for speed on all devices.</p>
+  <div class="feature">
+    <div class="icon">⚡</div>
+    <div>
+      <h3>Fast & Smooth</h3>
+      <p>Optimized for speed with zero lag on all devices.</p>
+    </div>
   </div>
 
-  <div class="feature-box">
-    <h3>📱 Mobile Friendly</h3>
-    <p>Perfect experience on Android & iOS.</p>
+  <div class="feature">
+    <div class="icon">📱</div>
+    <div>
+      <h3>Mobile Friendly</h3>
+      <p>Perfect experience on Android, iOS and tablets.</p>
+    </div>
   </div>
 
-  <div class="feature-box">
-    <h3>🔒 Secure Platform</h3>
-    <p>Safe, reliable and user focused.</p>
+  <div class="feature">
+    <div class="icon">🔒</div>
+    <div>
+      <h3>Secure Platform</h3>
+      <p>Built with safety, reliability and user trust in mind.</p>
+    </div>
   </div>
 
-</div>
+</section>
 
-<!-- FOOTER -->
-<div class="footer">
+<footer>
   © 2026 Gama 567 • All Rights Reserved
-</div>
+</footer>
 
 </body>
 </html>
