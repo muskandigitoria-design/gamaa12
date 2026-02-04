@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gama 567 – Official Platform</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gama 567 – Desktop App</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -16,153 +16,163 @@
 }
 
 body{
-  background:linear-gradient(180deg,#ffffff,#f3f6fb);
+  background:#eef1f7;
   color:#222;
 }
 
-/* HEADER */
-header{
-  padding:18px 15px;
-  text-align:center;
-  font-size:26px;
-  font-weight:700;
+/* LAYOUT */
+.app{
+  display:flex;
+  min-height:100vh;
 }
 
-header span{
+/* SIDEBAR */
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:#fff;
+  padding:25px 20px;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.logo span{
   color:#ff3d3d;
 }
 
-/* HERO */
-.hero{
-  max-width:1100px;
-  margin:auto;
-  padding:30px 15px 50px;
+.menu a{
+  display:block;
+  padding:12px 15px;
+  margin-bottom:10px;
+  border-radius:10px;
+  color:#cbd5e1;
+  text-decoration:none;
+  font-size:15px;
+}
+
+.menu a:hover,
+.menu a.active{
+  background:#1e293b;
+  color:#fff;
+}
+
+/* MAIN */
+.main{
+  flex:1;
   display:flex;
   flex-direction:column;
-  gap:30px;
+}
+
+/* TOP BAR */
+.topbar{
+  background:#fff;
+  padding:18px 25px;
+  display:flex;
+  justify-content:space-between;
   align-items:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
 }
 
-.hero-img img{
-  width:100%;
-  max-width:260px;
-  border-radius:22px;
-  box-shadow:0 20px 45px rgba(0,0,0,.25);
+.topbar h1{
+  font-size:22px;
+  font-weight:600;
 }
 
-.hero-text{
-  text-align:center;
+.download-btn{
+  padding:10px 22px;
+  background:linear-gradient(45deg,#ff3d3d,#ff7a18);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
 }
 
-.hero-text h1{
-  font-size:26px;
-  font-weight:700;
-  margin-bottom:10px;
+/* CONTENT */
+.content{
+  padding:30px;
+}
+
+/* HERO CARD */
+.hero-card{
+  background:#fff;
+  border-radius:20px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  gap:30px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.hero-card img{
+  width:220px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.hero-text h2{
+  font-size:28px;
+  margin-bottom:12px;
 }
 
 .hero-text p{
-  font-size:15px;
   color:#555;
-  margin-bottom:22px;
   line-height:1.6;
+  margin-bottom:20px;
 }
 
-/* CTA BUTTON */
-.cta{
-  display:block;
-  width:100%;
-  max-width:280px;
-  margin:0 auto;
-  padding:14px 0;
-  font-size:16px;
-  font-weight:600;
+.hero-text a{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:40px;
+  background:#0f172a;
   color:#fff;
-  text-align:center;
-  border-radius:50px;
-  background:linear-gradient(45deg,#ff3d3d,#ff7a18);
-  box-shadow:0 10px 25px rgba(255,61,61,.45);
   text-decoration:none;
-  transition:.3s ease;
-}
-
-.cta:hover{
-  transform:translateY(-2px);
-  box-shadow:0 15px 35px rgba(255,61,61,.6);
+  font-weight:600;
 }
 
 /* FEATURES */
 .features{
-  max-width:1000px;
-  margin:auto;
-  padding:20px 15px 50px;
-  display:flex;
-  flex-direction:column;
-  gap:15px;
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .feature{
   background:#fff;
-  padding:18px;
   border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  display:flex;
-  gap:12px;
-}
-
-.icon{
-  font-size:22px;
+  padding:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
 .feature h3{
-  font-size:16px;
-  margin-bottom:5px;
+  margin-bottom:8px;
+  font-size:17px;
 }
 
 .feature p{
   font-size:14px;
   color:#666;
-  line-height:1.5;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:13px;
-  color:#777;
-}
-
-/* DESKTOP */
-@media(min-width:768px){
-  header{
-    font-size:30px;
+/* MOBILE */
+@media(max-width:900px){
+  .sidebar{
+    display:none;
   }
 
-  .hero{
-    flex-direction:row;
-    justify-content:space-between;
-    padding:50px 20px 70px;
-  }
-
-  .hero-text{
-    text-align:left;
-    max-width:480px;
-  }
-
-  .hero-text h1{
-    font-size:38px;
-  }
-
-  .cta{
-    margin:0;
+  .hero-card{
+    flex-direction:column;
+    text-align:center;
   }
 
   .features{
-    flex-direction:row;
-  }
-
-  .feature{
-    flex:1;
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -170,61 +180,74 @@ footer{
 
 <body>
 
-<header>
-  Gama <span>567</span>
-</header>
+<div class="app">
 
-<section class="hero">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo">Gama <span>567</span></div>
 
-  <div class="hero-img">
-    <img src="https://gamam567.site/assets/img/banner-shot.png" alt="Gama 567">
-  </div>
-
-  <div class="hero-text">
-    <h1>India’s Trusted Gaming Platform</h1>
-    <p>
-      Experience a smooth, fast and reliable platform designed
-      for users who value performance and simplicity.
-    </p>
-
-    <a href="https://gamam567.site/app/Gama567_1.apk" class="cta">
-      Get Started Now
-    </a>
-  </div>
-
-</section>
-
-<section class="features">
-
-  <div class="feature">
-    <div class="icon">⚡</div>
-    <div>
-      <h3>Fast & Smooth</h3>
-      <p>Optimized for speed with zero lag on all devices.</p>
+    <div class="menu">
+      <a class="active" href="#">Dashboard</a>
+      <a href="#">Games</a>
+      <a href="#">Wallet</a>
+      <a href="#">Support</a>
+      <a href="#">Settings</a>
     </div>
   </div>
 
-  <div class="feature">
-    <div class="icon">📱</div>
-    <div>
-      <h3>Mobile Friendly</h3>
-      <p>Perfect experience on Android, iOS and tablets.</p>
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <h1>Dashboard</h1>
+      <a href="https://gamam567.site/app/Gama567_1.apk" class="download-btn">
+        Download App
+      </a>
     </div>
-  </div>
 
-  <div class="feature">
-    <div class="icon">🔒</div>
-    <div>
-      <h3>Secure Platform</h3>
-      <p>Built with safety, reliability and user trust in mind.</p>
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- HERO -->
+      <div class="hero-card">
+        <img src="https://gamam567.site/assets/img/banner-shot.png" alt="Gama 567">
+
+        <div class="hero-text">
+          <h2>India’s Trusted Gaming Platform</h2>
+          <p>
+            Smooth interface, fast performance and a secure
+            platform designed for modern users.
+          </p>
+
+          <a href="https://gamam567.site/app/Gama567_1.apk">
+            Get Started
+          </a>
+        </div>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="features">
+        <div class="feature">
+          <h3>⚡ Fast Performance</h3>
+          <p>Optimized for speed and smooth experience.</p>
+        </div>
+
+        <div class="feature">
+          <h3>📱 Mobile Friendly</h3>
+          <p>Works perfectly on Android and iOS.</p>
+        </div>
+
+        <div class="feature">
+          <h3>🔒 Secure Platform</h3>
+          <p>Built with user trust and safety.</p>
+        </div>
+      </div>
+
     </div>
+
   </div>
-
-</section>
-
-<footer>
-  © 2026 Gama 567 • All Rights Reserved
-</footer>
+</div>
 
 </body>
 </html>
